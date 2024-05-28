@@ -1,0 +1,4 @@
+buscar por nome
+buscar por categoria
+
+comando para fechar carrinho (somar preço de itens marcados)

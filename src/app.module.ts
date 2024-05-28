@@ -1,12 +1,15 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { ConfigModule } from '@nestjs/config';
+// import { ConfigModule } from '@nestjs/config';
+import { EstoqueModule } from './estoque/estoque.module';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [EstoqueModule],
+  controllers: [],
+  providers: [],
 })
 
 export class AppModule { }
+
+//Vai conter tudo o que eu vou precisar para que o código funcione
+
+//É basicamente um agrupamento de todos os arquivos utilizados no código

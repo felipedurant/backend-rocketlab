@@ -1,8 +1,7 @@
 // This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
 
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+// Esse arquivo serve para conectar a API com o banco de dados
+// Também vai setar o formato de cada classe dentro do banco de dados
 
 generator client {
   provider = "prisma-client-js"
@@ -13,18 +12,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  posts Post[]
+model Produto {
+  id        String  @id //Os @ são características específicas
+  nome      String // das propriedades (comandos Prisma)
+  valor     Int
+  codigo    String
+  categoria String?
+  carrinho  String  @default("n")
 }
 
-model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  content   String?
-  published Boolean? @default(false)
-  author    User?    @relation(fields: [authorId], references: [id])
-  authorId  Int?
-}
+//"npx prisma migrate dev" 
