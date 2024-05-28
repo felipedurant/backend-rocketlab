@@ -1,6 +1,6 @@
 Atividade concluída com sucesso
 
-(image.png)
+![Lista dos comandos implementados e testados](image-1.png)
 
 todos os comandos acima testados e funcionando com sucesso
 
@@ -20,4 +20,6 @@ todos os comandos acima testados e funcionando com sucesso
 
 3. pnpm run start:dev
 
-4. Entrar no postman usando o link 
+4. Entrar no postman usando o [link](https://www.postman.com/felipedurant/workspace/felipe-durant-rocket-lab/overview)
+
+5. Executar comandos enquanto o backend está sendo executado através do "pnpm run start:dev"
